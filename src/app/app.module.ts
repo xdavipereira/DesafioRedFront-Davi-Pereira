@@ -4,11 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { BehenceService } from './behence.service';
+import { ProjectsListComponent } from "./projects/projects_list.component";
+import { BehenceService } from './services/behence.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProjectsListComponent
+    
   ],
   imports: [
     BrowserModule,
