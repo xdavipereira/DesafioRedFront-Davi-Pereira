@@ -2,21 +2,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { ProjectsListComponent } from "./projects/projects_list.component";
 import { BehenceService } from './services/behence.service';
+import { ProjectModule } from "./project/project.module";
+import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProjectsListComponent
-    
   ],
+  entryComponents: [],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ProjectModule,
+    AppRoutingModule
   ],
   providers: [BehenceService],
   bootstrap: [AppComponent]

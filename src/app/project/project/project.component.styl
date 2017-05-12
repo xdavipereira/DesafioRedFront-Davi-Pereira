@@ -1,0 +1,103 @@
+  .projeto-section {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #fafafa;
+    .images-project {
+        flex: 2 1 90%;
+    }
+
+    .user-project {
+        flex 1 1 30%;
+        background-color: #fafafa;
+        border-left: 1px solid #e3e3e3;
+        display: flex
+        flex-flow: column;
+        .info-user{
+          display: flex;
+          flex-flow: row wrap;
+          border-bottom: 1px solid #e6e6e6;
+          
+          div {
+            padding-bottom: 1em;
+            flex: 1;
+            .user-name {
+              display: block;
+              color: black;
+              font-weight: 800;
+              font-size: 12px;
+              padding: .6em 1em .5em .8em;
+            }
+
+            .btn-follow {
+              margin: 1em 0 1em 1em;
+              padding: 5px 10px;
+              background: linear-gradient(#008aea, #024dcf);
+              border-color: #0055a7;
+              color: white;
+              border-radius: 5px;
+            }
+          }
+
+          .img-user{
+            padding: 0 1em 1em 0;
+          }
+        }
+
+        .info-project {
+          padding: 1em;
+          font-size: 12px;
+          color: #505050;
+          border-bottom: 1px solid #e6e6e6;
+          a {
+            color: inherit;
+          }
+
+          .status {
+            margin-top: 1em;
+            a {
+              margin: 1em;
+            }
+          }
+        }
+    }
+
+    .features-project {
+      padding: 1em;
+      display: flex;
+      flex-flow: row wrap;
+      border-bottom: 1px solid #e6e6e6;
+        a {
+          margin: 0 2px;  
+        }
+    }
+
+    .tools-project {
+      padding: 2em 1em;
+      display: flex;
+      flex-flow: row wrap;
+      border-bottom: 1px solid #e6e6e6;
+        a {
+          margin: 0 2px;
+          img {
+            height: 35px;
+            width: 35px;
+          }  
+        }
+    }
+
+    
+    .appreciation-section {
+      padding: 1em;
+      a {
+        padding: .5em;
+        border-radius: 5px;
+        text-align: center;
+        display: block;
+        background: linear-gradient(#008aea, #024dcf);
+        border-color: #0055a7;
+        color: white;
+      }
+    }
+
+
+  }

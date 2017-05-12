@@ -1,5 +1,5 @@
-import { Component, AfterViewInit } from '@angular/core';
-import { BehenceService } from '../services/behence.service'
+import { Component, AfterViewInit, ViewChild } from '@angular/core';
+import { BehenceService } from '../../services/behence.service'
 
 
 @Component({
@@ -10,7 +10,7 @@ import { BehenceService } from '../services/behence.service'
 
 
 export class ProjectsListComponent implements AfterViewInit {
-    constructor(private behenceService: BehenceService) {}
+  constructor(private behenceService: BehenceService) {}
 
   projects: any;
 
@@ -19,9 +19,8 @@ export class ProjectsListComponent implements AfterViewInit {
   }
 
   getProjetos(){
-            this.behenceService.getUsers().subscribe(data => {
+            this.behenceService.getProjects().subscribe(data => {
               this.projects = data.projects;
-              console.log(this.projects);
             })
   }
 

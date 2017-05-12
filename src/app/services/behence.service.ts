@@ -14,8 +14,13 @@ export class BehenceService {
 
     urlBase = 'http://localhost:3000';
  
-  getUsers() {
+  getProjects() {
     return this.http.get(`${this.urlBase}/projetos`)
+       .map(data => data.json());
+  }
+  
+  getProject(id) {
+    return this.http.get(`${this.urlBase}/projeto/${id}`)
        .map(data => data.json());
   }
 

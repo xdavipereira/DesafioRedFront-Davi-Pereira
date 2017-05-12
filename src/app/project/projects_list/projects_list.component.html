@@ -3,13 +3,13 @@
     <div class="projects-grid">
       <div *ngFor="let project of projects" class="projeto-item">
         <div class="img-produto">
-          <a href="">
+          <a>
             <img [src]="project.covers[230]" alt="">
           </a>
         </div>
         <div class="info-projeto">
           <div class="nome-projeto">
-            <a>{{project.name}}</a>
+              <a [routerLink]="['/project', project.id]">{{project.name}}</a>
           </div>
           <div class="autor-projeto">
             <span>de: </span> <a>{{project.owners[0].display_name}}</a>
@@ -28,3 +28,4 @@
     </div>
   </div>
 </div>
+<!--<modal-project-component></modal-project-component>-->
