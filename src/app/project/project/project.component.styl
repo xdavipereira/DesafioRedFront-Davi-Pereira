@@ -4,6 +4,15 @@
     background-color: #fafafa;
     .images-project {
         flex: 2 1 90%;
+        display: flex;
+        flex-flow: column;
+
+        div {
+          margin-bottom: 1em;
+          img {
+            width: 100%;
+          }
+        }
     }
 
     .user-project {
@@ -45,9 +54,12 @@
 
         .info-project {
           padding: 1em;
-          font-size: 12px;
           color: #505050;
           border-bottom: 1px solid #e6e6e6;
+          p {
+            font-size: 14px;
+            font-weight: 800;
+          }
           a {
             color: inherit;
           }

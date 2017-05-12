@@ -1,53 +1,44 @@
 <div class="container">
-    <div class="projeto-section">
+    <div  *ngIf="project" class="projeto-section">
         <div class="images-project">
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/4690f352031553.5901fb808f643.png" alt="">
+          <div *ngFor="let module of project.modules">
+            <img src="{{module.src}}" alt="">
+          </div>
         </div>
         <div class="user-project">
           <div class="info-user">
             <div>
-              <a routerLink="/projects" class="user-name">Relanjaelcoco studio</a>
+              <a [routerLink]="['/projects']" class="user-name">{{project.owners[0].display_name}}</a>
               <a class="btn-follow">Seguir</a>
             </div>
-            <img class="img-user" src="https://mir-s3-cdn-cf.behance.net/user/50/372299.540b5fd2967d8.png" alt="">
+            <img class="img-user" src="{{project.owners[0].images[50]}}" alt="">
           </div>
           <div class="info-project">
-            <p>Ayuda en Accion - 2015 Annual Report</p>
+            <p>{{project.name}}</p>
             <div>
-              <a >Ilustração, </a>
-              <a >Design grafico, </a>
-              <a >Arquitetura de Informações</a>
+              <a *ngFor="let field of project.fields">{{ field }}, </a>
             </div>
             <div class="status">
-              <a><i class="fa fa-thumbs-up" aria-hidden="true"></i> 345</a>
-              <a><i class="fa fa-eye" aria-hidden="true"></i> 675</a>
-              <a><i class="fa fa-bookmark" aria-hidden="true"></i> 90</a>
+              <a><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{project.stats.appreciations}}</a>
+              <a><i class="fa fa-eye" aria-hidden="true"></i> {{project.stats.views}}</a>
+              <a><i class="fa fa-bookmark" aria-hidden="true"></i> {{project.stats.comments}}</a>
             </div>
           </div>
           <div class="features-project">
-              <a href="">
-                <img src="https://a5.behance.net/706b5b6ccd9098c82e89779b9d5365163afa1eaf/img/galleries/icons/ribbons/1x/network.png" alt="">
-              </a>  
-              <a href="">
-                <img src="https://a5.behance.net/706b5b6ccd9098c82e89779b9d5365163afa1eaf/img/galleries/icons/ribbons/1x/network.png" alt="">
-              </a>  
-              <a href="">
-                <img src="https://a5.behance.net/706b5b6ccd9098c82e89779b9d5365163afa1eaf/img/galleries/icons/ribbons/1x/network.png" alt="">
+              <a *ngFor="let feature of project.features" >
+                <img src="{{feature.site.ribbon.image}}" alt="">
               </a>  
           </div>
           <div class="tools-project">
-              <a href="">
-                <img src="https://a5.behance.net/706b5b6ccd9098c82e89779b9d5365163afa1eaf/img/project/tools/1x/illustrator.png" alt="">
-              </a>  
-              <a href="">
-                <img src="https://a5.behance.net/706b5b6ccd9098c82e89779b9d5365163afa1eaf/img/project/tools/1x/illustrator.png" alt="">
-              </a>  
-              <a href="">
-                <img src="https://a5.behance.net/706b5b6ccd9098c82e89779b9d5365163afa1eaf/img/project/tools/1x/illustrator.png" alt="">
-              </a>  
-              <a href="">
-                <img src="https://a5.behance.net/706b5b6ccd9098c82e89779b9d5365163afa1eaf/img/project/tools/1x/illustrator.png" alt="">
-              </a>  
+              <a *ngFor="let tool of project.tools" >
+                <div *ngIf="tool.synonym">
+                  <img src="{{tool.synonym.icon_url}}" alt="">
+                </div>
+                <div *ngIf="!tool.synonym">
+                  {{tool.title}}
+                </div>
+
+              </a>
           </div>
 
           <div class="appreciation-section">
