@@ -1,9 +1,39 @@
-<div class="container">
+<div class="container-projeto">
     <div  *ngIf="project" class="projeto-section">
         <div class="images-project">
           <div *ngFor="let module of project.modules">
-            <img src="{{module.src}}" alt="">
+            <!--<img src="{{module.src}}" alt="">-->
           </div>
+
+        <div class="bottom-project">
+          <div class="comentarios"></div>
+          <div class="info-section">
+            <div class="creditos">
+              <h4>Creditos</h4>
+              <div class="info-creditos">
+                <a>
+                  <img class="img-user" src="{{project.owners[0].images[50]}}" alt="">
+                </a>
+                <div>
+                   <a>{{project.owners[0].display_name}}</a>
+                   <a>{{project.owners[0].location}}</a>
+                </div>
+                <a href="">+ Seguir</a>
+              </div>
+            </div>
+            <div class="tags">
+              <h4>Tags</h4>
+              <div>
+                <a *ngFor="let tag of project.tags">{{tag}}</a>
+              </div>
+            </div>
+            <div class="tools">
+              <h4>Ferramentas Usadas</h4>
+            </div>
+          </div>
+        </div>
+
+
         </div>
         <div class="user-project">
           <div class="info-user">
