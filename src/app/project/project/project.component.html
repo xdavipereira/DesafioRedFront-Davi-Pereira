@@ -1,12 +1,26 @@
 <div class="container-projeto">
-    <div  *ngIf="project" class="projeto-section">
+    <div  *ngIf="project && comments" class="projeto-section">
         <div class="images-project">
           <div *ngFor="let module of project.modules">
-            <!--<img src="{{module.src}}" alt="">-->
+            <img src="{{module.src}}" alt="">
           </div>
 
         <div class="bottom-project">
-          <div class="comentarios"></div>
+          <div class="comentarios">
+            <div class="coment-field">
+              <h4>Comentarios (<strong>{{comments.length}}</strong>)</h4>
+              <p>Você deve se <a href="">cadastrar</a> para participar da conversa.</p>
+            </div>
+            <div *ngFor="let comment of comments" class="comment-user">
+              <a>
+                <img class="img-user" src="{{comment.user.images[50]}}" alt="">
+              </a>
+              <div>
+                  <a>{{comment.user.display_name}}</a>
+                  <a>{{comment.comment}}</a>
+              </div>
+            </div>
+          </div>
           <div class="info-section">
             <div class="creditos">
               <h4>Creditos</h4>
@@ -29,7 +43,9 @@
             </div>
             <div class="tools">
               <h4>Ferramentas Usadas</h4>
+              <tools-component [tools]="project.tools"></tools-component>
             </div>
+            
           </div>
         </div>
 
@@ -60,15 +76,7 @@
               </a>  
           </div>
           <div class="tools-project">
-              <a *ngFor="let tool of project.tools" >
-                <div *ngIf="tool.synonym">
-                  <img src="{{tool.synonym.icon_url}}" alt="">
-                </div>
-                <div *ngIf="!tool.synonym">
-                  {{tool.title}}
-                </div>
-
-              </a>
+            <tools-component [tools]="project.tools"></tools-component>
           </div>
 
           <div class="appreciation-section">

@@ -23,5 +23,9 @@ export class BehenceService {
     return this.http.get(`${this.urlBase}/projeto/${id}`)
        .map(data => data.json());
   }
+  getCommentsProject(id) {
+    return this.http.get(`${this.urlBase}/projeto/${id}/comments`)
+       .map(data => data.json());
+  }
 
 }

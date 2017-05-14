@@ -10,28 +10,56 @@
 
     .bottom-project{
       display:flex;
-      flex: row wrap;
+      flex-flow: row wrap;
       padding: 2em;
 
       .comentarios {
-        flex: 2;
+        flex: 1;
         border: 1px solid #e6e6e6;
-        height: 300px;
+        background-color: #ffffff;
+        border-radius: 5px;
+
+        .coment-field {
+          padding: 2em;
+          margin-bottom: 1em;
+          border-bottom: 1px solid #e3e3e3;
+        }
+
+        .comment-user {
+            display: flex
+            flex-flow: row;
+            align-items: center;
+            padding: .5em 2em;
+            div {
+              flex: 2;
+              display: flex
+              padding: 1em;
+              flex-flow: column;
+              align-items: flex-start;
+              a {
+                text-decoration: none;
+                color: #505050;
+              }
+          }
+        }
       }
 
       .info-section {
-        flex: 1;
-        margin-left: 1em;
         display: flex
-        flex-flow: column;
+        flex-flow: row wrap;
         margin-bottom: 1em;
-
-
+        justify-content: space-between;
+        div {
+         background-color: #FFFFFF;
+        }          
+        
         div.creditos {
+          width: 370px;
           border: 1px solid #e3e3e3;
           border-radius: 5px;
           margin-bottom: 1em;
           padding: 1em;
+
           .info-creditos {
             display: flex
             flex-flow: row;
@@ -47,12 +75,11 @@
                 color: #505050;
               }
             }
-            a {
-            }
           }
         }
 
         div.tags {
+          width: 370px;
           border: 1px solid #e3e3e3;
           border-radius: 5px;
 
@@ -81,14 +108,14 @@
           }
         }
 
-        div.tools {
+      div.tools {
+          width: 370px;
           border: 1px solid #e3e3e3;
           border-radius: 5px;
-          margin-bottom: 1em;
           padding: 1em;
         }
-
       }
+
 
     }
 
