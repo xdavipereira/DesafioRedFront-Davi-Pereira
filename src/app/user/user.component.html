@@ -1,4 +1,10 @@
 <div  class="user-section">
+
+
+    <div *ngIf="!user">
+        <sk-cube-grid></sk-cube-grid>
+    </div>
+    
     <div *ngIf="user && userProjects" class="container container-user">
         <div class="profile">
             <div class="profile-user">

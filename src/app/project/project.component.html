@@ -1,4 +1,8 @@
 <div class="container-projeto">
+  <div *ngIf="!project">
+    <sk-cube-grid></sk-cube-grid>
+  </div>
+
   <div *ngIf="project && comments" class="projeto-section">
     <div class="images-project">
       <div *ngFor="let module of project.modules">

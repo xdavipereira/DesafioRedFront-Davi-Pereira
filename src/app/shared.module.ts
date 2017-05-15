@@ -4,13 +4,13 @@ import { FormsModule }    from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { ToolsComponent } from './tools/tools.component'
 import { ProjectCardComponent } from './project_card/project-card.component'
-
+import { NgSpinKitModule } from 'ng-spin-kit'
 
 @NgModule({
-   imports: [CommonModule,RouterModule],
+   imports: [CommonModule,RouterModule,NgSpinKitModule],
    declarations: [ToolsComponent, ProjectCardComponent],
    providers: [],
-   exports: [ToolsComponent, ProjectCardComponent],
+   exports: [ToolsComponent, ProjectCardComponent,NgSpinKitModule],
 })
 
 export class SharedModule { }
