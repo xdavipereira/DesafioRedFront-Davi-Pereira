@@ -20,6 +20,9 @@
           display: flex;
           flex-flow: row;
           div {
+            a {
+              color: #505050;
+            }
             padding: 0 1em;
           }
         }
@@ -28,6 +31,7 @@
           flex-flow: row;
           justify-content: space-between;
           margin-top: 1em;
+          text-align: center;
           a {
             flex: 1;
             margin-right: 1em;
@@ -53,6 +57,7 @@
                 font-size: 11px;
             }
             a {
+                color: #505050;
                 margin-left: auto;
                 font-size: 18px;
             }
@@ -94,6 +99,7 @@
               padding: 0;
               li {
                   display: inline-block;
+                  padding: 1em;
                   a {
                       text-decoration: none;
                       color: #505050;
@@ -123,7 +129,14 @@
     }
     .user-projects {
       flex: 1 1 60%;
-      padding: 0 1em;
+      padding: 2em 2em;
+
+      .header-user-projects {
+        border-bottom: 1px solid #e3e3e3;
+        height: 50px;
+        text-align: center;
+      }
+      
     }
   }
 }
