@@ -12,7 +12,7 @@ export class BehenceService {
 
     constructor(public http: Http){ }
 
-    urlBase = 'http://localhost:3000';
+    urlBase = 'https://simple-behace-api.herokuapp.com';
  
   getProjects() {
     return this.http.get(`${this.urlBase}/projetos`)
