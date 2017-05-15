@@ -1,14 +1,28 @@
 <div class="container-projeto">
+
+  <!-- Spinner Component -->
   <div *ngIf="!project">
     <sk-cube-grid></sk-cube-grid>
   </div>
+  <!-- Spinner Component -->
+
+
 
   <div *ngIf="project && comments" class="projeto-section">
+  
+
     <div class="images-project">
+     
+     <!-- Imagens Project -->
       <div *ngFor="let module of project.modules">
         <img src="{{module.src}}" alt="">
       </div>
+      <!-- Imagens Project -->
+
+
       <div class="mid-project"></div>
+      
+      <!-- Tags Tools e Comentarios -->
       <div class="bottom-project">
         <div class="comentarios">
           <div class="coment-field">
@@ -52,9 +66,12 @@
 
         </div>
       </div>
+      <!-- Tags Tools e Comentarios -->
+
+
     </div>
 
-
+<!-- Informações do Projeto -->
     <div class="user-project">
       <div class="info-user">
         <div>
@@ -87,5 +104,9 @@
         <a><i class="fa fa-thumbs-up"></i> Avaliar Projeto</a>
       </div>
     </div>
+
+  <!-- Tags Tools e Comentarios -->
   </div>
+
+  
 </div>

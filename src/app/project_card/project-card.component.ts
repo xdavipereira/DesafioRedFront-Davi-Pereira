@@ -11,6 +11,6 @@ import { Component, Input } from '@angular/core';
 export class ProjectCardComponent {
   constructor() {}
 
-  @Input()  projects: any;
+  @Input()  projects: Array<any>;
 
 }

@@ -6,6 +6,8 @@
     </div>
     
     <div *ngIf="user && userProjects" class="container container-user">
+        
+        <!-- Informações do Usuario -->
         <div class="profile">
             <div class="profile-user">
                 <h3>{{user.display_name}}</h3>
@@ -96,6 +98,11 @@
 
         </div>
 
+        <!-- Informações do Usuario -->
+
+
+        <!-- Projetos do Usuario -->
+
         <div class="user-projects">
             <div class="header-user-projects">
                 <h3>Projetos</h3>
@@ -104,6 +111,7 @@
                 <project-card [projects]="userProjects"></project-card>
             </div>
         </div>
+        <!-- Projetos do Usuario -->
        
     </div>
 
