@@ -1,0 +1,129 @@
+.user-section {
+  margin-top: 100px;
+  min-height: 800px;
+  .container-user {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    .profile {
+      flex: 1 1 30%;
+      border-right: 1px solid #e3e3e3;
+
+      .profile-user {
+        display: flex;
+        flex-flow: column;
+        padding: 1em;
+        border-bottom: 1px solid #e3e3e3;
+        .profile-info {
+          display: flex;
+          flex-flow: row;
+          div {
+            padding: 0 1em;
+          }
+        }
+        .btn-profile-info {
+          display: flex;
+          flex-flow: row;
+          justify-content: space-between;
+          margin-top: 1em;
+          a {
+            flex: 1;
+            margin-right: 1em;
+            padding: 5px 2em;
+            background: linear-gradient(#008aea, #024dcf);
+            border-color: #0055a7;
+            color: white;
+            border-radius: 5px;
+          }
+        }
+      }
+
+      .profile-stats {
+        padding: 1em;
+        border-bottom: 1px solid #e3e3e3;
+
+        div.item-profile-stats {
+            display: flex;
+            flex-flow: row;
+            margin-bottom: 1em;
+            label {
+                text-transform: uppercase;
+                font-size: 11px;
+            }
+            a {
+                margin-left: auto;
+                font-size: 18px;
+            }
+        }
+
+      }
+
+      .profile-focus {
+        padding: 1em;
+        border-bottom: 1px solid #e6e6e6;
+        a {
+          font-size: 13px;
+          color: #6a6a6a;
+          &:hover {
+            color: #505050;
+          }
+        }
+      }
+
+      .profile-features {
+        padding: 1em;
+        border-bottom: 1px solid #e6e6e6;
+                
+        div {
+            display: flex;
+            flex-flow: row wrap;
+            a {
+                margin: 0 2px;  
+            }
+         }
+      }
+
+
+      .profile-social {
+          padding: 1em;
+          border-bottom: 1px solid #e6e6e6;
+          ul {
+              list-style-type: none;
+              padding: 0;
+              li {
+                  display: inline-block;
+                  a {
+                      text-decoration: none;
+                      color: #505050;
+                      padding-right: 1em;
+                      font-size: 1.5em;
+                  }
+              }
+          }
+      }
+
+
+      .profile-about{
+          padding: 1em;
+          border-bottom: 1px solid #e3e3e3;
+          font-size: 12px;
+          word-wrap: break-word;
+          white-space: pre-line;
+      }
+
+      .profile-date {
+          padding: 2em 1em;
+          font-size: 12px;
+
+      }
+
+
+    }
+    .user-projects {
+      flex: 1 1 60%;
+      padding: 0 1em;
+    }
+  }
+}

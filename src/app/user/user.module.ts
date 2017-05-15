@@ -2,10 +2,8 @@ import { NgModule }       from '@angular/core';
 import { CommonModule }   from '@angular/common';
 import { FormsModule }    from '@angular/forms';
 
-import { ProjectsListComponent } from "../projects_list/projects_list.component";
-import { ProjectComponent} from '../project/project.component'
-
-import { ProjectRoutingModule } from './project-routing.module'
+import { UserComponent } from "./user.component";
+import { UserRoutingModule } from './user-routing.module'
 import { ToolsComponent } from '../tools/tools.component'
 import { ProjectCardComponent } from '../project_card/project-card.component'
 import { SharedModule } from "../shared.module";
@@ -15,14 +13,13 @@ import { SharedModule } from "../shared.module";
     CommonModule,
     FormsModule,
     SharedModule,
-    ProjectRoutingModule
+    UserRoutingModule
   ],
   declarations: [
-      ProjectsListComponent,
-      ProjectComponent
+      UserComponent,
+
   ],
-  exports: [],
   providers: [ ]
 })
 
-export class ProjectModule {}
+export class UserModule {}

@@ -19,12 +19,28 @@ export class BehenceService {
        .map(data => data.json());
   }
   
-  getProject(id) {
+  getProject(id: number) {
     return this.http.get(`${this.urlBase}/projeto/${id}`)
        .map(data => data.json());
   }
-  getCommentsProject(id) {
+
+  getCommentsProject(id: number) {
     return this.http.get(`${this.urlBase}/projeto/${id}/comments`)
+       .map(data => data.json());
+  }
+
+  getUsers() {
+    return this.http.get(`${this.urlBase}/users`)
+       .map(data => data.json());
+  }
+
+  getUser(id: number) {
+    return this.http.get(`${this.urlBase}/user/${id}`)
+       .map(data => data.json());
+  
+}
+  getUserProjects(id: number) {
+    return this.http.get(`${this.urlBase}/user/${id}/projects`)
        .map(data => data.json());
   }
 

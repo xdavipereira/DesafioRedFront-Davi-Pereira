@@ -1,0 +1,78 @@
+<div  class="user-section">
+    <div *ngIf="user && userProjects" class="container container-user">
+        <div class="profile">
+            <div class="profile-user">
+                <h3>{{user.display_name}}</h3>
+                <div class="profile-info">
+                    <a  class=""><img src="{{user.images[100]}}" alt=""> </a>
+                    <div>
+                        <p>Story Teller and a wizard but mortley iam a culture lover and traveler</p>
+                        <a >{{user.location}}</a>
+                    </div>
+                </div>
+                <div class="btn-profile-info">
+                    <a >Seguir</a>
+                    <a >Mensagem</a>
+                </div>
+            </div>
+            
+            <div class="profile-stats">
+                <div class="item-profile-stats">
+                    <label for=""><i class="fa fa-star"></i>  Exibições do Projeto</label>
+                    <a >{{user.stats.views}}</a>
+                </div>
+                <div class="item-profile-stats">
+                    <label for=""><i class="fa fa-star"></i>  Avaliações</label>
+                    <a >{{user.stats.appreciations}}</a>
+                </div>
+                <div class="item-profile-stats">
+                    <label for=""><i class="fa fa-star"></i>  Seguidores</label>
+                    <a >{{user.stats.followers}}</a>
+                </div>
+                <div class="item-profile-stats">
+                    <label for=""><i class="fa fa-star"></i>  Seguindo</label>
+                    <a >{{user.stats.following}}</a>
+                </div>
+            </div>
+
+            <div class="profile-focus">
+                <h4>Foco</h4>
+               <a *ngFor="let field of user.fields">{{ field }}, </a>
+            </div>
+
+            <div class="profile-features">
+                <h4>Destaque em </h4>
+                <div>
+                    <a>
+                        <img src="https://a5.behance.net/016bc2ab5c801760bceef902bdd5acbda19b7eab/img/galleries/icons/ribbons/1x/network.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="profile-social">
+                <h4>Na Web</h4>
+                <ul>
+                    <li><a ><i class="fa fa-star"></i></a></li>
+                    <li><a ><i class="fa fa-star"></i></a></li>
+                    <li><a ><i class="fa fa-star"></i></a></li>
+                    <li><a ><i class="fa fa-star"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="profile-about">
+                {{user.sections[user.display_name]}}
+            </div>
+
+            <div class="profile-date">
+                <p>MENBRO DESDE : {{user.created_on | date: 'mediumDate' }}</p>
+            </div>
+
+        </div>
+
+        <div class="user-projects">
+            <project-card [projects]="userProjects"></project-card>
+        </div>
+       
+    </div>
+
+</div>

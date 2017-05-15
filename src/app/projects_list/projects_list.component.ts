@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ViewChild } from '@angular/core';
-import { BehenceService } from '../../services/behence.service'
+import { BehenceService } from '../services/behence.service'
 
 
 @Component({
