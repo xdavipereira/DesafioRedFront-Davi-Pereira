@@ -12,7 +12,7 @@ Uma demo da aplicação pode ser encontrada clicando no link [DEMO](https://test
 git clone https://github.com/xdavipereira/DesafioRedFront-Davi-Pereira.git
 cd DesafioRedFront-Davi-Pereira
 npm install
-ng serve
+npm start
 ```
 
 ## Acesso a aplicação
